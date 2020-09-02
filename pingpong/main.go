@@ -1,7 +1,6 @@
 package main
 
 import (
-	pp "benchmarks/pingpong/proto"
 	"context"
 	"flag"
 	"fmt"
@@ -11,6 +10,8 @@ import (
 	"os"
 	"text/tabwriter"
 	"time"
+
+	pp "github.com/kalyanac/benchmarks/pingpong/proto"
 
 	"github.com/golang/protobuf/ptypes/empty"
 	"google.golang.org/grpc"
