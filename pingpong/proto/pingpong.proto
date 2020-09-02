@@ -1,0 +1,15 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option go_package = "benchmarks/pingpong";
+
+package pingpong;
+
+service PingPong {
+    rpc PingPong (PingPongMessage) returns (PingPongMessage) {}
+    rpc EmptyPingPong (google.protobuf.Empty) returns (google.protobuf.Empty) {}
+}
+
+message PingPongMessage {
+    bytes payload = 1;
+}
